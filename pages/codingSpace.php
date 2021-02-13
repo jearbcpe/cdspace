@@ -8,8 +8,8 @@
             <!--<span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>-->
         </h3>
         <div class="card-toolbar">
-            <button type="button" onclick="saveCode()" class="btn btn-text-success btn-hover-light-success font-weight-bold mr-2">Save</button>
-            <button type="button" onclick="loadCode()" class="btn btn-text-warning btn-hover-light-warning font-weight-bold mr-2">Load</button>
+            <button id="btnSaveCode" type="button" onclick="saveCode()" class="btn btn-text-success btn-hover-light-success font-weight-bold mr-2">Save</button>
+            <button id="btnLoadCode" type="button" onclick="loadCode()" class="btn btn-text-warning btn-hover-light-warning font-weight-bold mr-2">Load</button>
         </div>
     </div>
     <div class="card-body">
@@ -73,7 +73,7 @@
 
     function saveCode() {
         var parm = new Object();
-        parm.u_id = "<?=$_SESSION['u_id'];?>";
+        parm.u_id = "<?= $_SESSION['u_id']; ?>";
         parm.codeContent = btoa($("#txtCode").val());
         parm.examNo = $("#hiddenExamNo").val();
         var myJson = JSON.stringify(parm);
@@ -90,6 +90,7 @@
 
                     //$('#divShowSuccess').show();
                     $("#divShowSuccess").show().delay(1000).fadeOut();
+                    $('#btnLoadCode').prop('disabled', false);
 
                     //$('#').removeClass('hidden');
                     //$('#successfulSave').addClass('hidden');
@@ -104,7 +105,7 @@
 
     function loadCode() {
         var parm = new Object();
-        parm.u_id = "<?=$_SESSION['u_id'];?>";
+        parm.u_id = "<?= $_SESSION['u_id']; ?>";
         parm.examNo = $("#hiddenExamNo").val();
         var myJson = JSON.stringify(parm);
 
@@ -116,10 +117,21 @@
             async: true,
             success: function(data) {
                 var rs = $.parseJSON(data);
+
                 if (rs['status'] == "success") {
                     var codeContent = atob(rs['codeContent']);
                     $("textarea#txtCode").val(codeContent);
-
+                    $('#btnLoadCode').prop('disabled', false);
+                    if($.trim($("#txtCode").val())=='')
+                        $('#btnSaveCode').prop('disabled', true);
+                    else
+                        $('#btnSaveCode').prop('disabled', false);
+                } else if (rs['status'] == "fail") {
+                    $('#btnLoadCode').prop('disabled', true);
+                    if($.trim($("#txtCode").val())=='')
+                        $('#btnSaveCode').prop('disabled', true);
+                    else
+                        $('#btnSaveCode').prop('disabled', false);
                 }
             },
             error: function() {
@@ -127,4 +139,12 @@
             }
         });
     }
+
+    $("#txtCode").keyup(function() {
+        if ($.trim($("#txtCode").val()) == '')
+            $('#btnSaveCode').prop('disabled', true);
+        else
+            $('#btnSaveCode').prop('disabled', false);
+
+    });
 </script>

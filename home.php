@@ -1,10 +1,12 @@
 <?php
 session_start();
-$_SESSION['u_id'] = $_GET['u_id'];
-$_SESSION['u_fullName'] = $_GET['fullName'];
-$_SESSION['position'] = $_GET['position'];
-//if($_GET['u_id'])
-	//echo "<script>window.location = window.location.href.split('?')[0] + '?page=javascript/helloJS';</script>";
+if($_GET['u_id']){
+	$_SESSION['u_id'] = $_GET['u_id'];
+	$_SESSION['u_fullName'] = $_GET['fullName'];
+	$_SESSION['position'] = $_GET['position'];
+	echo "<script>window.location = window.location.href.split('?')[0] + '?page=javascript/helloJS';</script>";
+}
+
 ?>
 <!DOCTYPE html>
 
