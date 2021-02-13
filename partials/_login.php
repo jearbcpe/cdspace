@@ -14,7 +14,7 @@ License: You must have a valid license purchased only from themeforest(the above
 -->
 <html lang="en">
 	<!--begin::Head-->
-	<head><base href="">
+	<head><base href="../../../">
 		<meta charset="utf-8" />
 		<title>Login Page 1 | Keenthemes</title>
 		<meta name="description" content="Login page example" />
@@ -34,8 +34,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
-        <script src="./assets/js/jquery-3.5.1.min.js"></script>
-
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -54,7 +52,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</a>
 						<!--end::Aside header-->
 						<!--begin::Aside title-->
-						<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">OPS ACADEMY
+						<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Discover Amazing Metronic
 						<br />with great build tools</h3>
 						<!--end::Aside title-->
 					</div>
@@ -74,33 +72,31 @@ License: You must have a valid license purchased only from themeforest(the above
 							<form class="form" novalidate="novalidate" id="kt_login_signin_form">
 								<!--begin::Title-->
 								<div class="pb-13 pt-lg-0 pt-5">
-									<h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Welcome to OPS Academy</h3>
-									
-                                    <span class="text-muted font-weight-bold font-size-h4">Login By 
-
-									<a href="javascript:;" id="kt_login_signup" class="text-primary font-weight-bolder">OPS Intranet</a></span>
-							
-                                </div>
+									<h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Welcome to Metronic</h3>
+									<span class="text-muted font-weight-bold font-size-h4">New Here?
+									<a href="javascript:;" id="kt_login_signup" class="text-primary font-weight-bolder">Create an Account</a></span>
+								</div>
 								<!--begin::Title-->
 								<!--begin::Form group-->
 								<div class="form-group">
-									<label class="font-size-h6 font-weight-bolder text-dark">Username</label>
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg" type="text" name="username" id="txtUsername" autocomplete="off" />
+									<label class="font-size-h6 font-weight-bolder text-dark">Email</label>
+									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg" type="text" name="username" autocomplete="off" />
 								</div>
 								<!--end::Form group-->
 								<!--begin::Form group-->
 								<div class="form-group">
 									<div class="d-flex justify-content-between mt-n5">
 										<label class="font-size-h6 font-weight-bolder text-dark pt-5">Password</label>
-										<!--<a href="javascript:;" class="text-primary font-size-h6 font-weight-bolder text-hover-primary pt-5" id="kt_login_forgot">Forgot Password ?</a>-->
+										<a href="javascript:;" class="text-primary font-size-h6 font-weight-bolder text-hover-primary pt-5" id="kt_login_forgot">Forgot Password ?</a>
 									</div>
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg" type="password" id="txtPassword" name="password" autocomplete="off" />
+									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg" type="password" name="password" autocomplete="off" />
 								</div>
 								<!--end::Form group-->
 								<!--begin::Action-->
 								<div class="pb-lg-0 pb-5">
-									<button onclick="verifyUser()" type="button" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Sign In</button>
-
+									<button type="button" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Sign In</button>
+									<button type="button" class="btn btn-light-primary font-weight-bolder px-8 py-4 my-3 font-size-lg">
+									<!-- SVG file not found; assets/media/svg/social-icons/google.svg -->Sign in with Google</button>
 								</div>
 								<!--end::Action-->
 							</form>
@@ -187,8 +183,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Content footer-->
 					<div class="d-flex justify-content-lg-start justify-content-center align-items-end py-7 py-lg-0">
 						<div class="text-dark-50 font-size-lg font-weight-bolder mr-10">
-							<span class="mr-1">2021 ©</span>
-							<a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">Teerapon</a>
+							<span class="mr-1">2020©</span>
+							<a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">Keenthemes</a>
 						</div>
 						<a href="#" class="text-primary font-weight-bolder font-size-lg">Terms</a>
 						<a href="#" class="text-primary ml-5 font-weight-bolder font-size-lg">Plans</a>
@@ -206,39 +202,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#8950FC", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script>
 		<!--end::Global Config-->
 		<!--begin::Global Theme Bundle(used by all pages)-->
-		<script src="/assets/plugins/global/plugins.bundle.js"></script>
-		<script src="/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-		<script src="/assets/js/scripts.bundle.js"></script>
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
 		<!--end::Global Theme Bundle-->
 		<!--begin::Page Scripts(used by this page)-->
-		<script src="/assets/js/pages/custom/login/login-general.js"></script>
+		<script src="assets/js/pages/custom/login/login-general.js"></script>
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
 </html>
-<script>
-function verifyUser() {
-        var parm = new Object();
-        parm.username = $("#txtUsername").val();
-        parm.password = $("#txtPassword").val();
-        var myJson = JSON.stringify(parm);
-
-        $.ajax({
-            url: 'https://portal.moj.go.th/ws/user.php/verifyUser',
-            type: "POST",
-            datatype: "application/json",
-            data: myJson,
-            async: true,
-            success: function(data) {
-                var rs = $.parseJSON(data);
-                if (rs['status'] == "success") {
-					window.location = window.location + "home.php?u_id="+rs['u_id'] + "&page=javascript/helloJS";
-
-                }
-            },
-            error: function() {
-                console.log("error"); //writeLog
-            }
-        });
-    }
-</script>

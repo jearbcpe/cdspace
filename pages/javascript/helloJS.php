@@ -1,5 +1,5 @@
-<input type="hidden" id="examNo" value="exam_1"></input>
-<input type="hidden" id="u_id" value="<?php echo $_SESSION['u_id']; ?>"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_1"></input>
+<input type="hidden" id="hiddenUID" value="<?php echo "1229"; ?>"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -22,7 +22,7 @@
             </div>
 
             <div class="col-12 pt-10">
-                <h3 class="display-4" id="headerText">Hello ......</h3>
+                <h3 class="display-4" id="headerText">Hello World</h3>
             </div>
               
             </div>
@@ -35,7 +35,7 @@
                 <span class="card-label font-weight-bolder text-dark">Coding space</span>
             </div>
                 <div class="col-6">
-                    <xmp><h3 class="display-4" id="headerText">Hello ......</h3></xmp>
+                    <xmp><h3 class="display-4" id="headerText">Hello World</h3></xmp>
                 </div>
             </div>
             <!--end::Body-->

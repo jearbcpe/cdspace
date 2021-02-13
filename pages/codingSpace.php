@@ -4,13 +4,13 @@
             <div class="col-12">
                 <span class="card-label font-weight-bolder text-dark">Coding space</span>
             </div>
-           
+
             <!--<span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>-->
         </h3>
         <div class="card-toolbar">
-                <button type="button" onclick="saveCode();" class="btn btn-text-success btn-hover-light-success font-weight-bold mr-2">Save</button>
-                <button type="button" onclick="loadCode();" class="btn btn-text-warning btn-hover-light-warning font-weight-bold mr-2">Load</button>          
-            </div>
+            <button type="button" onclick="saveCode()" class="btn btn-text-success btn-hover-light-success font-weight-bold mr-2">Save</button>
+            <button type="button" onclick="loadCode()" class="btn btn-text-warning btn-hover-light-warning font-weight-bold mr-2">Load</button>
+        </div>
     </div>
     <div class="card-body">
         <div class="card card-custom card-shadowless gutter-b">
@@ -23,8 +23,22 @@
                         <button type="button" onclick="run();" class="btn btn-lg btn-outline-success mr-2">Run</button>
                         <button type="button" onclick="clearCode();" class="btn btn-lg btn-outline-danger mr-2">Clear</button>
                     </div>
-                    <div class="form-group row">
-                       </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-12">
+                <div class="form-group " id="divShowSuccess">
+                    <div class="alert alert-custom alert-light-success fade show mb-5" role="alert">
+                        <div class="alert-text">บันทึกสำเร็จ</div>
+                    </div>
+                </div>
+
+                <div class="form-group " hidden>
+                    <div class="alert alert-danger" role="alert">
+                        <div class="alert-text">บันทึกไม่สำเร็จ</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,6 +46,9 @@
 </div>
 
 <script>
+    loadCode();
+    $("#divShowSuccess").hide();
+
     function run() {
         var el = document.getElementById('txtCode');
         var scriptText = el.value;
@@ -54,11 +71,60 @@
         document.getElementById('txtCode').focus();
     }
 
-    function saveCode(){
-        alert("Save");
+    function saveCode() {
+        var parm = new Object();
+        parm.u_id = $("#hiddenUID").val();
+        parm.codeContent = btoa($("#txtCode").val());
+        parm.examNo = $("#hiddenExamNo").val();
+        var myJson = JSON.stringify(parm);
+
+        $.ajax({
+            url: 'https://portal.moj.go.th/ws/academy/academy.php/saveCode',
+            type: "POST",
+            datatype: "application/json",
+            data: myJson,
+            async: true,
+            success: function(data) {
+                var rs = $.parseJSON(data);
+                if (rs['status'] == "success") {
+
+                    //$('#divShowSuccess').show();
+                    $("#divShowSuccess").show().delay(1000).fadeOut();
+
+                    //$('#').removeClass('hidden');
+                    //$('#successfulSave').addClass('hidden');
+
+                }
+            },
+            error: function() {
+                console.log("error"); //writeLog
+            }
+        });
     }
 
-    function loadCode(){
-        alert("Load");
+    function loadCode() {
+        var parm = new Object();
+        parm.u_id = $("#hiddenUID").val();
+        parm.examNo = $("#hiddenExamNo").val();
+        var myJson = JSON.stringify(parm);
+
+        $.ajax({
+            url: 'https://portal.moj.go.th/ws/academy/academy.php/loadCode',
+            type: "POST",
+            datatype: "application/json",
+            data: myJson,
+            async: true,
+            success: function(data) {
+                var rs = $.parseJSON(data);
+                if (rs['status'] == "success") {
+                    var codeContent = atob(rs['codeContent']);
+                    $("textarea#txtCode").val(codeContent);
+
+                }
+            },
+            error: function() {
+                console.log("error"); //writeLog
+            }
+        });
     }
 </script>
