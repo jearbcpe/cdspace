@@ -217,6 +217,14 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--end::Body-->
 </html>
 <script>
+function getAppPath() {
+    var pathArray = location.pathname.split('/');
+    var appPath = "/";
+    for(var i=1; i<pathArray.length-1; i++) {
+        appPath += pathArray[i] + "/";
+    }
+    return appPath;
+}
 function verifyUser() {
         var parm = new Object();
         parm.username = $("#txtUsername").val();
@@ -232,7 +240,7 @@ function verifyUser() {
             success: function(data) {
                 var rs = $.parseJSON(data);
                 if (rs['status'] == "success") {
-					window.location = window.location + "home.php?u_id="+rs['u_id'] + "&page=javascript/helloJS";
+					window.location =getAppPath()+ "home.php?u_id="+rs['u_id'] + "&page=javascript/helloJS&fullName="+rs['fullName'].split(' ')[0]+"&position="+rs['position'];
 
                 }
             },
@@ -240,5 +248,7 @@ function verifyUser() {
                 console.log("error"); //writeLog
             }
         });
+
+		
     }
 </script>

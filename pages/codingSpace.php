@@ -73,7 +73,7 @@
 
     function saveCode() {
         var parm = new Object();
-        parm.u_id = $("#hiddenUID").val();
+        parm.u_id = "<?=$_SESSION['u_id'];?>";
         parm.codeContent = btoa($("#txtCode").val());
         parm.examNo = $("#hiddenExamNo").val();
         var myJson = JSON.stringify(parm);
@@ -104,7 +104,7 @@
 
     function loadCode() {
         var parm = new Object();
-        parm.u_id = $("#hiddenUID").val();
+        parm.u_id = "<?=$_SESSION['u_id'];?>";
         parm.examNo = $("#hiddenExamNo").val();
         var myJson = JSON.stringify(parm);
 

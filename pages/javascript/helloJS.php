@@ -1,5 +1,4 @@
 <input type="hidden" id="hiddenExamNo" value="exam_1"></input>
-<input type="hidden" id="hiddenUID" value="<?php echo "1229"; ?>"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -18,7 +17,7 @@
             <!--begin::Body-->
             <div class="card-body">
             <div class="col-12">
-                <code><h2 class="h2 ">เขียนคำสั่งแสดงข้อความ Hello JavaScript</h2></code>
+                <h2 class="h2 text-primary ">เขียนคำสั่งแสดงข้อความ Hello JavaScript</h2>
             </div>
 
             <div class="col-12 pt-10">
@@ -31,9 +30,13 @@
         <div class="card card-custom card-shadowless gutter-b">
             <!--begin::Body-->
             <div class="card-body">
+            <h3 class="card-title align-items-start flex-column">
+
             <div class="col-12">
-                <span class="card-label font-weight-bolder text-dark">Coding space</span>
+
+                <span class="card-label font-weight-bolder text-dark">HTML</span>
             </div>
+            </h3>
                 <div class="col-6">
                     <xmp><h3 class="display-4" id="headerText">Hello World</h3></xmp>
                 </div>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+$_SESSION['u_id'] = $_GET['u_id'];
+$_SESSION['u_fullName'] = $_GET['fullName'];
+$_SESSION['position'] = $_GET['position'];
+//if($_GET['u_id'])
+	//echo "<script>window.location = window.location.href.split('?')[0] + '?page=javascript/helloJS';</script>";
+?>
 <!DOCTYPE html>
 
 <!--
@@ -18,7 +26,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<head>
 		<base href="">
 		<meta charset="utf-8" />
-		<title>Metronic Live preview | Keenthemes</title>
+		<title>Metronic Live preview | Teerapon</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
