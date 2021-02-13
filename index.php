@@ -44,6 +44,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<script src="./assets/js/jquery-3.5.1.min.js"></script>
 	</head>
 
 	<!--end::Head-->

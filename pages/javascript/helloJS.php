@@ -1,3 +1,5 @@
+<input type="hidden" id="examNo" value="exam_1"></input>
+<input type="hidden" id="u_id" value="<?php echo $_SESSION['u_id']; ?>"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
