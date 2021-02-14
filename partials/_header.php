@@ -144,6 +144,22 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Compare Type</span>
 										</a>
 									</li>
+									<li class="menu-item <?= ($arrPage[1] == "logicOR") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
+										<a href="./home.php?page=javascript/logicOR" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Logic OR</span>
+										</a>
+									</li>
+									<li class="menu-item <?= ($arrPage[1] == "logicAND") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
+										<a href="./home.php?page=javascript/logicAND" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Logic AND</span>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</li>

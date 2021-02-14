@@ -34,7 +34,7 @@
             <div class="col-12">
                 <div class="col-12">
                     <div class="form-group row">
-                        <textarea class="form-control" rows="5" id="txtCode"></textarea>
+                        <textarea class="form-control" rows="8" id="txtCode"></textarea>
                     </div>
                     <div class="form-group row">
                         <button type="button" onclick="run();" class="btn btn-lg btn-outline-success mr-2">Run</button>

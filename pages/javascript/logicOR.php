@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_12"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_15"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -17,25 +17,32 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">เปรียบเทียบตัวเลข input1 กับ input2 ให้เป็นจริง  </h2>
+                    <h2 class="h2 text-primary ">เมื่อกดปุ่มให้ผลลัพธ์ Logic ระหว่าง input1 กับ input2 เป็น true  </h2>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">
                         <div class="col-2">
-                            <input class="form-control" type="number" placeholder="input1" id="txtNumber1" value="0" />
+                        <select class="form-control" id="select1">
+                            <option value="0">False</option>
+                            <option value="1">True</option>
+						</select>
                         </div>
                         <div class="col-1" align="center">
-                            <p class="form-control text-danger" id="txtOfString"> > </p>
+                            <p class="form-control text-danger" id="txtOfString"> OR </p>
                         </div>
                         <div class="col-2">
-                            <input class="form-control" type="number" placeholder="input2" id="txtNumber2" value="0" />
+                        <select class="form-control" id="select2">
+                            <option value="0">False</option>
+                            <option value="1">True</option>
+						</select>                        
                         </div>
                         <div class="col-2">
-                            <button class="form-control btn btn-success" onclick=compare()> is </button>
+                            <button class="form-control btn btn-success" onclick=takeLogic()> is </button>
                         </div>
                         <div class="col-4">
                             <h3 class="display-4" id="txtResult">?</p>
                         </div>
+                    
                     </div>
                 </div>
 
@@ -55,16 +62,22 @@
                 <div class="col-12">
                     <xmp>
 <div class="col-2">
-    <input class="form-control" type="number" placeholder="input1" id="txtNumber1" value="0" />
+<select class="form-control" id="select1">
+    <option value="0">False</option>
+    <option value="1">True</option>
+</select>
 </div>
 <div class="col-1" align="center">
-    <p class="form-control text-danger" id="txtOfString"> > </p>
+    <p class="form-control text-danger" id="txtOfString"> OR </p>
 </div>
 <div class="col-2">
-    <input class="form-control" type="number" placeholder="input2" id="txtNumber2" value="0" />
+<select class="form-control" id="select2">
+    <option value="0">False</option>
+    <option value="1">True</option>
+</select>                        
 </div>
 <div class="col-2">
-    <button class="form-control btn btn-success" onclick=compare()> is </button>
+    <button class="form-control btn btn-success" onclick=takeLogic()> is </button>
 </div>
 <div class="col-4">
     <h3 class="display-4" id="txtResult">?</p>
