@@ -32,7 +32,7 @@ $arrPage = explode("/", $page);
 							</a>
 							<div class="menu-submenu menu-submenu-classic menu-submenu-left">
 								<ul class="menu-subnav">
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "helloJS") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/helloJS" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
@@ -40,7 +40,7 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Hello JavaScript</span>
 										</a>
 									</li>
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "alertHelloJS") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/alertHelloJS" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
@@ -48,7 +48,7 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Alert Hello JavaScript</span>
 										</a>
 									</li>
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "onclickJS") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/onclickJS" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
@@ -56,7 +56,7 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Onclick</span>
 										</a>
 									</li>
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "consoleJS") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/consoleJS" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
@@ -64,7 +64,7 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Console</span>
 										</a>
 									</li>
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "consoleFromInput") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/consoleFromInput" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
@@ -72,7 +72,7 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Console From Input</span>
 										</a>
 									</li>
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "printPage") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/printPage" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
@@ -80,7 +80,7 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Pring Page</span>
 										</a>
 									</li>
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "calNumber") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/calNumber" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
@@ -88,7 +88,7 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Cal Number</span>
 										</a>
 									</li>
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "connectString") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/connectString" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
@@ -96,7 +96,7 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Connect String</span>
 										</a>
 									</li>
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "increment") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/increment" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
@@ -104,12 +104,44 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Increment</span>
 										</a>
 									</li>
-									<li class="menu-item" aria-haspopup="true">
+									<li class="menu-item <?= ($arrPage[1] == "mod") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/mod" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
 											</i>
 											<span class="menu-text">Mod</span>
+										</a>
+									</li>
+									<li class="menu-item <?= ($arrPage[1] == "power") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
+										<a href="./home.php?page=javascript/power" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Power</span>
+										</a>
+									</li>
+									<li class="menu-item <?= ($arrPage[1] == "compareNum") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
+										<a href="./home.php?page=javascript/compareNum" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Compare Number</span>
+										</a>
+									</li>
+									<li class="menu-item <?= ($arrPage[1] == "compareNull") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
+										<a href="./home.php?page=javascript/compareNull" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Compare NULL</span>
+										</a>
+									</li>
+									<li class="menu-item <?= ($arrPage[1] == "compareType") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
+										<a href="./home.php?page=javascript/compareType" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Compare Type</span>
 										</a>
 									</li>
 								</ul>

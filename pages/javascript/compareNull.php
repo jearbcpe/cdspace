@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_8"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_13"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -17,25 +17,21 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">แสดงข้อความ Ministry of Justice หลังจากกดปุ่ม =</h2>
+                    <h2 class="h2 text-primary ">เปรียบเทียบตัวแปร x กับ ตัวแปร y ให้เป็นจริง  </h2>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">
                         <div class="col-2">
-                            <input class="form-control" type="text" id="txtFirst" value="" />
-                        </div>
-                        <div class="col-1" align="center">
-                            <input class="form-control" id="txtOfString" value=" of " readonly> </input>
-                        </div>
-                        <div class="col-2">
-                            <input class="form-control" type="text" id="txtSecond" value="" />
-                        </div>
-                        <div class="col-2">
-                            <button class="form-control btn btn-success" onclick=calNumber()> = </button>
-                        </div>
-                        <div class="col-4">
                             <h3 class="display-4" id="txtResult">?</p>
                         </div>
+
+                        <div class="col-2">
+                            <button class="form-control btn btn-success" onclick=compareNull()> Compare</button>
+                        </div>
+                        <script>
+                            var x = null;
+                            var y;
+                        </script>
                     </div>
                 </div>
 
@@ -55,20 +51,12 @@
                 <div class="col-12">
                     <xmp>
 <div class="col-2">
-    <input class="form-control" type="text" id="txtFirst" value="" />
-</div>
-<div class="col-1" align="center">
-    <input class="form-control" id="txtOfString" value=" of " readonly> </input>
-</div>
-<div class="col-2">
-    <input class="form-control" type="text" id="txtSecond" value="" />
-</div>
-<div class="col-2">
-    <button class="form-control btn btn-success" onclick=calNumber()> = </button>
-</div>
-<div class="col-4">
     <h3 class="display-4" id="txtResult">?</p>
 </div>
+<script>
+    var x = null;
+    var y;
+</script>
                     </xmp>
                 </div>
             </div>

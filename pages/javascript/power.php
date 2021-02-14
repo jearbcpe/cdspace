@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_8"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_11"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -17,21 +17,21 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">แสดงข้อความ Ministry of Justice หลังจากกดปุ่ม =</h2>
+                    <h2 class="h2 text-primary ">คำนวนเลขยกกำลัง input1 ด้วย input2 </h2>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">
                         <div class="col-2">
-                            <input class="form-control" type="text" id="txtFirst" value="" />
+                            <input class="form-control" type="number" placeholder="input1" id="txtNumber" value="" />
                         </div>
                         <div class="col-1" align="center">
-                            <input class="form-control" id="txtOfString" value=" of " readonly> </input>
+                            <p class="form-control" id="txtOfString"> ^ </p>
                         </div>
                         <div class="col-2">
-                            <input class="form-control" type="text" id="txtSecond" value="" />
+                            <input class="form-control" type="number" placeholder="input2" id="txtPower" value="" />
                         </div>
                         <div class="col-2">
-                            <button class="form-control btn btn-success" onclick=calNumber()> = </button>
+                            <button class="form-control btn btn-success" onclick=power()> = </button>
                         </div>
                         <div class="col-4">
                             <h3 class="display-4" id="txtResult">?</p>
@@ -55,16 +55,16 @@
                 <div class="col-12">
                     <xmp>
 <div class="col-2">
-    <input class="form-control" type="text" id="txtFirst" value="" />
+    <input class="form-control" type="number" placeholder="input1" id="txtNumber" value="" />
 </div>
 <div class="col-1" align="center">
-    <input class="form-control" id="txtOfString" value=" of " readonly> </input>
+    <p class="form-control" id="txtOfString"> ^ </p>
 </div>
 <div class="col-2">
-    <input class="form-control" type="text" id="txtSecond" value="" />
+    <input class="form-control" type="number" placeholder="input2" id="txtPower" value="" />
 </div>
 <div class="col-2">
-    <button class="form-control btn btn-success" onclick=calNumber()> = </button>
+    <button class="form-control btn btn-success" onclick=power()> = </button>
 </div>
 <div class="col-4">
     <h3 class="display-4" id="txtResult">?</p>

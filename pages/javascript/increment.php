@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_8"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_9"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -22,7 +22,7 @@
                 <div class="col-12 pt-10">
                     <div class="form-group row">
                         <div class="col-2">
-                            <input class="form-control" type="text" id="txtNumber" value="0" />
+                            <input class="form-control" type="number" id="txtNumber" value="0" />
                         </div>
                         <div class="col-2">
                             <button class="form-control btn btn-success" onclick=increment()> +5 </button>
@@ -46,7 +46,7 @@
                 <div class="col-12">
                     <xmp>
 <div class="col-2">
-    <input class="form-control" type="text" id="txtNumber" value="0" />
+    <input class="form-control" type="number" id="txtNumber" value="0" />
 </div>
 <div class="col-2">
     <button class="form-control btn btn-success" onclick=increment()> +5 </button>

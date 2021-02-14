@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_9"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_10"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -17,18 +17,18 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">กดปุ่มแล้วเพิ่มค่าทีละ 5</h2>
+                    <h2 class="h2 text-primary "></h2>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">
                         <div class="col-2">
-                            <input class="form-control" type="text" id="txtFirstNumber" value="" />
+                            <input class="form-control" type="number" placeholder="input1" id="txtFirstNumber" value="" />
                         </div>
                         <div class="col-1" align="center">
                             <p class="form-control" id="pMod" >%</p>
                         </div>
                         <div class="col-2">
-                            <input class="form-control" type="text" id="txtModNumber" value="" />
+                            <input class="form-control" type="number" placeholder="input2" id="txtModNumber" value="" />
                         </div>
                         <div class="col-2">
                             <button class="form-control btn btn-success" onclick=mod()> = </button>
@@ -55,19 +55,20 @@
                 <div class="col-12">
                     <xmp>
 <div class="col-2">
-    <input class="form-control" type="text" id="txtFirstNumber" value="" />
+    <input class="form-control" type="number" placeholder="input1"  id="txtFirstNumber" value="" />
 </div>
 <div class="col-1" align="center">
     <p class="form-control" id="pMod" >%</p>
 </div>
 <div class="col-2">
-    <input class="form-control" type="text" id="txtModNumber" value="" />
+    <input class="form-control" type="number" placeholder="input2" id="txtModNumber" value="" />
 </div>
 <div class="col-2">
     <button class="form-control btn btn-success" onclick=mod()> = </button>
 </div>
 <div class="col-4">
     <h3 class="display-4" id="txtResult">?</p>
+</div>
                     </xmp>
                 </div>
             </div>
