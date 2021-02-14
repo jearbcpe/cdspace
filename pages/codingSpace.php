@@ -1,3 +1,20 @@
+
+<div class="card card-custom card-shadowless gutter-b" id="divJSCode">
+            <!--begin::Body-->
+            <div class="card-body">
+                <h3 class="card-title align-items-start flex-column">
+
+                    <div class="col-12">
+
+                        <span class="card-label font-weight-bolder text-dark">JavaScript</span>
+                    </div>
+                </h3>
+                <div class="col-6">
+                    <p id="pJSCode"></p>
+                </div>
+            </div>
+            <!--end::Body-->
+        </div>
 <div class="card card-custom card-shadowless gutter-b">
     <div class="card-header border-0 py-5">
         <h3 class="card-title align-items-start flex-column">
@@ -47,11 +64,16 @@
 
 <script>
     loadCode();
+    $("#divJSCode").hide();
     $("#divShowSuccess").hide();
 
     function run() {
+       
         var el = document.getElementById('txtCode');
         var scriptText = el.value;
+        if($.trim(scriptText) != "")
+            $("#divJSCode").show();
+        $("#pJSCode").html('<xmp>'+scriptText+'</xmp>');
         var oldScript = document.getElementById('scriptContainer');
         var newScript;
 

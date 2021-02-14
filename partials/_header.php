@@ -56,7 +56,62 @@ $arrPage = explode("/", $page);
 											<span class="menu-text">Onclick</span>
 										</a>
 									</li>
-									
+									<li class="menu-item" aria-haspopup="true">
+										<a href="./home.php?page=javascript/consoleJS" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Console</span>
+										</a>
+									</li>
+									<li class="menu-item" aria-haspopup="true">
+										<a href="./home.php?page=javascript/consoleFromInput" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Console From Input</span>
+										</a>
+									</li>
+									<li class="menu-item" aria-haspopup="true">
+										<a href="./home.php?page=javascript/printPage" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Pring Page</span>
+										</a>
+									</li>
+									<li class="menu-item" aria-haspopup="true">
+										<a href="./home.php?page=javascript/calNumber" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Cal Number</span>
+										</a>
+									</li>
+									<li class="menu-item" aria-haspopup="true">
+										<a href="./home.php?page=javascript/connectString" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Connect String</span>
+										</a>
+									</li>
+									<li class="menu-item" aria-haspopup="true">
+										<a href="./home.php?page=javascript/increment" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Increment</span>
+										</a>
+									</li>
+									<li class="menu-item" aria-haspopup="true">
+										<a href="./home.php?page=javascript/mod" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Mod</span>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</li>
