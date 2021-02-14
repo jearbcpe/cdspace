@@ -8,8 +8,8 @@
             <!--<span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>-->
         </h3>
         <div class="card-toolbar">
-            <button id="btnSaveCode" type="button" onclick="saveCode()" class="btn btn-text-success btn-hover-light-success font-weight-bold mr-2">Save</button>
-            <button id="btnLoadCode" type="button" onclick="loadCode()" class="btn btn-text-warning btn-hover-light-warning font-weight-bold mr-2">Load</button>
+            <button id="btnSaveCode" type="button" onclick="saveCode()" class="btn btn-hover-bg-success btn-text-success btn-hover-text-white border-0 font-weight-bold mr-2">Save</button>
+            <button id="btnLoadCode" type="button" onclick="loadCode()" class="btn btn-hover-bg-warning btn-text-warning btn-hover-text-white border-0 font-weight-bold mr-2">Load</button>
         </div>
     </div>
     <div class="card-body">
@@ -90,6 +90,8 @@
 
                     //$('#divShowSuccess').show();
                     $("#divShowSuccess").show().delay(1000).fadeOut();
+                    $('#btnSaveCode').prop('disabled', true);
+
                     $('#btnLoadCode').prop('disabled', false);
 
                     //$('#').removeClass('hidden');
@@ -145,6 +147,5 @@
             $('#btnSaveCode').prop('disabled', true);
         else
             $('#btnSaveCode').prop('disabled', false);
-
     });
 </script>
