@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_GET['u_id']){
+if(isset($_GET['u_id'])){
 	$_SESSION['u_id'] = $_GET['u_id'];
 	$_SESSION['u_fullName'] = $_GET['fullName'];
 	$_SESSION['position'] = $_GET['position'];
