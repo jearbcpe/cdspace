@@ -77,7 +77,7 @@ $arrPage = explode("/", $page);
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
 											</i>
-											<span class="menu-text">Pring Page</span>
+											<span class="menu-text">Print Page</span>
 										</a>
 									</li>
 									<li class="menu-item <?= ($arrPage[1] == "calNumber") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
@@ -158,6 +158,22 @@ $arrPage = explode("/", $page);
 												<span></span>
 											</i>
 											<span class="menu-text">Logic AND</span>
+										</a>
+									</li>
+									<li class="menu-item <?= ($arrPage[1] == "numOfStr") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
+										<a href="./home.php?page=javascript/numOfStr" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Num Of String</span>
+										</a>
+									</li>
+									<li class="menu-item <?= ($arrPage[1] == "positionWord") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
+										<a href="./home.php?page=javascript/positionWord" class="menu-link">
+											<i class="menu-bullet menu-bullet-dot">
+												<span></span>
+											</i>
+											<span class="menu-text">Position Of Word</span>
 										</a>
 									</li>
 								</ul>

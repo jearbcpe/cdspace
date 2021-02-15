@@ -17,7 +17,7 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">เมื่อกดปุ่มให้ผลลัพธ์ Logic ระหว่าง input1 กับ input2 เป็น true  </h2>
+                    <h2 class="h2 text-primary ">เมื่อกดปุ่มให้แสดงผลลัพธ์ Logic AND ระหว่าง input1 กับ input2   </h2>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">

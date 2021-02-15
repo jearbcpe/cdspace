@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_15"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_17"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -17,30 +17,19 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">เมื่อกดปุ่มให้แสดงผลลัพธ์ Logic OR ระหว่าง input1 กับ input2  </h2>
+                    <h2 class="h2 text-primary ">เมื่อกดปุ่มให้แสดงจำนวนตัวอักษร </h2>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">
-                        <div class="col-2">
-                        <select class="form-control" id="select1">
-                            <option value="0">False</option>
-                            <option value="1">True</option>
-						</select>
+                        <div class="col-3">
+                            <input class="form-control" type="text" id="txtString" value="" />
                         </div>
-                        <div class="col-1" align="center">
-                            <p class="form-control text-danger" id="txtOfString"> OR </p>
+                      
+                        <div class="col-2">
+                            <button class="form-control btn btn-success" onclick=getNumOfStr()> = </button>
                         </div>
                         <div class="col-2">
-                        <select class="form-control" id="select2">
-                            <option value="0">False</option>
-                            <option value="1">True</option>
-						</select>                        
-                        </div>
-                        <div class="col-2">
-                            <button class="form-control btn btn-success" onclick=takeLogic()> is </button>
-                        </div>
-                        <div class="col-4">
-                            <h3 class="display-4" id="txtResult">?</p>
+                            <input class="form-control" type="text" id="txtResult" placeholder="จำนวนตัวอักษร" value="" readonly />
                         </div>
                     
                     </div>
@@ -61,26 +50,15 @@
                 </h3>
                 <div class="col-12">
                     <xmp>
-<div class="col-2">
-<select class="form-control" id="select1">
-    <option value="0">False</option>
-    <option value="1">True</option>
-</select>
+<div class="col-3">
+    <input class="form-control" type="text" id="txtString" value="" />
 </div>
-<div class="col-1" align="center">
-    <p class="form-control text-danger" id="txtOfString"> OR </p>
+
+<div class="col-2">
+    <button class="form-control btn btn-success" onclick=getNumOfStr()> = </button>
 </div>
 <div class="col-2">
-<select class="form-control" id="select2">
-    <option value="0">False</option>
-    <option value="1">True</option>
-</select>                        
-</div>
-<div class="col-2">
-    <button class="form-control btn btn-success" onclick=takeLogic()> is </button>
-</div>
-<div class="col-4">
-    <h3 class="display-4" id="txtResult">?</p>
+    <input class="form-control" type="text" id="txtResult" placeholder="จำนวนตัวอักษร" value="" readonly />
 </div>
                     </xmp>
                 </div>
