@@ -32,150 +32,46 @@ $arrPage = explode("/", $page);
 							</a>
 							<div class="menu-submenu menu-submenu-classic menu-submenu-left">
 								<ul class="menu-subnav">
-									<li class="menu-item <?= ($arrPage[1] == "helloJS") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/helloJS" class="menu-link">
+								<?php
+									$curl = curl_init();
+
+									curl_setopt_array($curl, array(
+									CURLOPT_URL => 'https://portal.moj.go.th/ws/academy/academy.php/examList',
+									CURLOPT_RETURNTRANSFER => true,
+									CURLOPT_ENCODING => '',
+									CURLOPT_MAXREDIRS => 10,
+									CURLOPT_TIMEOUT => 0,
+									CURLOPT_FOLLOWLOCATION => true,
+									CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+									CURLOPT_CUSTOMREQUEST => 'POST',
+									CURLOPT_POSTFIELDS =>'{
+										
+									}',
+									CURLOPT_HTTPHEADER => array(
+										'Content-Type: application/json'
+									),
+									));
+
+									$response = curl_exec($curl);
+									$arrExam = json_decode($response, true);
+
+									for ($i=0;$i < sizeof($arrExam);$i++) {
+										$no = $arrExam[$i]['examNo'];
+										$code = $arrExam[$i]['examCode'];
+										$name = $arrExam[$i]['examName'];
+									
+									?>
+									<li class="menu-item <?php= ($arrPage[1] == $code) ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
+										<a href="./home.php?page=javascript/<?php echo $code; ?>" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
 											</i>
-											<span class="menu-text">Hello JavaScript</span>
+											<span class="menu-text"><?php echo $name; ?></span>
 										</a>
 									</li>
-									<li class="menu-item <?= ($arrPage[1] == "alertHelloJS") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/alertHelloJS" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Alert Hello JavaScript</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "onclickJS") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/onclickJS" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Onclick</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "consoleJS") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/consoleJS" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Console</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "consoleFromInput") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/consoleFromInput" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Console From Input</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "printPage") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/printPage" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Print Page</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "calNumber") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/calNumber" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Cal Number</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "connectString") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/connectString" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Connect String</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "increment") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/increment" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Increment</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "mod") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/mod" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Mod</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "power") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/power" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Power</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "compareNum") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/compareNum" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Compare Number</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "compareNull") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/compareNull" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Compare NULL</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "compareType") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/compareType" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Compare Type</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "logicOR") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/logicOR" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Logic OR</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "logicAND") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/logicAND" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Logic AND</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "numOfStr") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/numOfStr" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Num Of String</span>
-										</a>
-									</li>
-									<li class="menu-item <?= ($arrPage[1] == "positionWord") ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/positionWord" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text">Position Of Word</span>
-										</a>
-									</li>
+									<?php } ?>
+										
+									
 								</ul>
 							</div>
 						</li>
