@@ -64,6 +64,14 @@ else
 			else
 				$('#swExamStatus').prop('checked', false);
 
+			if("<?php echo $_SESSION['u_id']; ?>" == "1229"){
+				$("#swExamStatus").prop("disabled", false);
+			}
+			else{
+				$("#swExamStatus").prop("disabled", true);
+			}
+				
+
 		},
 		error: function() {
 			console.log("error"); //writeLog
@@ -118,10 +126,12 @@ else
 					if(code == "<?php echo $arrPage[1]; ?>")
 						strActive += "menu-item-active";
 					
-
-					strMenu += '<li class="menu-item '+strActive+'" aria-haspopup="true">';
-					strMenu += '<a href="./home.php?page=javascript/'+code+'" class="menu-link"><i class="menu-bullet menu-bullet-dot"><span></span></i>';
-					strMenu += '<span class="menu-text">'+(parseInt(order) +1 )+ '. ' + name + '</span></a></li>';
+					if(active == "1" || "<?php echo $_SESSION['u_id']; ?>" == "1229"){
+						strMenu += '<li class="menu-item '+strActive+'" aria-haspopup="true">';
+						strMenu += '<a href="./home.php?page=javascript/'+code+'" class="menu-link"><i class="menu-bullet menu-bullet-dot"><span></span></i>';
+						strMenu += '<span class="menu-text">'+(parseInt(order) +1 )+ '. ' + name + '</span></a></li>';
+					}
+					
 				}
 				strMenu += '</ul></div>';
 				$("#divMenu").html(strMenu);

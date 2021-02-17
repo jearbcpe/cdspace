@@ -27,7 +27,7 @@ $arrPage = explode("/", $page);
 								</div>
 
 								<!--end::Info-->
-								<div class="d-flex align-items-right flex-wrap mr-1">
+								<div class="d-flex align-items-right flex-wrap mr-1" id="divSwitchMenu">
 									<span class="switch switch-outline switch-icon switch-success">
 										<label>
 											<input type="checkbox" id="swExamStatus" checked="checked" name="select">
