@@ -107,7 +107,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 							</div>
 							<div class="pb-lg-0 pb-5 pt-10">
-								<a href="/asset/files/JavaScript_Part1.pdf" download>
+								<a href="assets/files/JavaScript_Part1.pdf" download>
 									- Slide JavaScript 1 
 								</a>
 							</div>
