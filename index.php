@@ -312,6 +312,11 @@ License: You must have a valid license purchased only from themeforest(the above
 					window.location = getAppPath() + "home.php?u_id=" + rs['u_id'] + "&page=javascript/helloJS&fullName=" + rs['fullName'].split(' ')[0] + "&position=" + rs['position'];
 
 				}
+				else
+				{
+					alert("Username หรือ Password ไม่ถูกต้อง");
+					$("#txtUsername").focus();
+				}
 			},
 			error: function() {
 				console.log("error"); //writeLog

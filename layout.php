@@ -96,4 +96,40 @@ else
 			});
 		
 	});
+
+
+		
+		$.ajax({
+			url: 'https://portal.moj.go.th/ws/academy/academy.php/examList',
+			type: "POST",
+			datatype: "application/json",
+			async: true,
+			success: function(data) {
+	
+				var strMenu = '<div class="menu-submenu menu-submenu-classic menu-submenu-left"><ul class="menu-subnav">';
+				var rs = $.parseJSON(data);
+				for(var i = 0;i<rs.length;i++){
+					var order = rs[i]['order'];
+					var no = rs[i]['examNo'];
+					var code = rs[i]['examCode'];
+					var name = rs[i]['examName'];
+					var active = rs[i]['active'];
+					var strActive = "";
+					if(code == "<?php echo $arrPage[1]; ?>")
+						strActive += "menu-item-active";
+					
+
+					strMenu += '<li class="menu-item '+strActive+'" aria-haspopup="true">';
+					strMenu += '<a href="./home.php?page=javascript/'+code+'" class="menu-link"><i class="menu-bullet menu-bullet-dot"><span></span></i>';
+					strMenu += '<span class="menu-text">'+(parseInt(order) +1 )+ '. ' + name + '</span></a></li>';
+				}
+				strMenu += '</ul></div>';
+				$("#divMenu").html(strMenu);
+				
+			},
+			error: function() {
+				console.log("error"); //writeLog
+			}
+	
+		});
 </script>

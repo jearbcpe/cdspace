@@ -30,54 +30,7 @@ $arrPage = explode("/", $page);
 								<span class="menu-desc"></span>
 								<i class="menu-arrow"></i>
 							</a>
-							<div class="menu-submenu menu-submenu-classic menu-submenu-left">
-								<ul class="menu-subnav">
-								<?php
-									$curl = curl_init();
-
-									curl_setopt_array($curl, array(
-									CURLOPT_URL => 'https://portal.moj.go.th/ws/academy/academy.php/examList',
-									CURLOPT_RETURNTRANSFER => true,
-									CURLOPT_ENCODING => '',
-									CURLOPT_MAXREDIRS => 10,
-									CURLOPT_TIMEOUT => 0,
-									CURLOPT_FOLLOWLOCATION => true,
-									CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-									CURLOPT_CUSTOMREQUEST => 'POST',
-									CURLOPT_POSTFIELDS =>'{
-										
-									}',
-									CURLOPT_HTTPHEADER => array(
-										'Content-Type: application/json'
-									),
-									));
-
-									$response = curl_exec($curl);
-									$arrExam = json_decode($response, true);
-
-									for ($i=0;$i < sizeof($arrExam);$i++) {
-										$order = $arrExam[$i]['order'];
-										$no = $arrExam[$i]['examNo'];
-										$code = $arrExam[$i]['examCode'];
-										$name = $arrExam[$i]['examName'];
-										$active = $arrExam[$i]['active'];
-										if($active == "1" || $_SESSION['u_id'] == "1229"){
-									?>
-									<li class="menu-item <?php= ($arrPage[1] == $code) ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
-										<a href="./home.php?page=javascript/<?php echo $code; ?>" class="menu-link">
-											<i class="menu-bullet menu-bullet-dot">
-												<span></span>
-											</i>
-											<span class="menu-text"><?php echo (intval($order) + 1).'. '.$name; ?></span>
-										</a>
-									</li>
-									<?php }
-									} 
-									?>
-										
-									
-								</ul>
-							</div>
+							<div id="divMenu"></div>
 						</li>
 						<li class="menu-item menu-item-submenu <?= ($arrPage[0] == "jquery") ?  'menu-item-active' :  ''; ?>" data-menu-toggle="click" aria-haspopup="true">
 							<a href="javascript:;" class="menu-link menu-toggle">
