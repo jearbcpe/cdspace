@@ -106,6 +106,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<button onclick="verifyUser()" type="button" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Sign In</button>
 
 							</div>
+							<div class="pb-lg-0 pb-5 pt-10">
+								<a href="/asset/files/JavaScript_Part1.pdf" download>
+									- Slide JavaScript 1 
+								</a>
+							</div>
 							<!--end::Action-->
 						</form>
 						<!--end::Form-->
