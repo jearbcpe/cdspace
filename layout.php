@@ -46,3 +46,54 @@ else
 		</div>
 
 		<!--end::Main-->
+
+<script>
+	var parm = new Object();
+	parm.examNo = $("#hiddenExamNo").val();
+	var myJson = JSON.stringify(parm);
+	$.ajax({
+		url: 'https://portal.moj.go.th/ws/academy/academy.php/examStatus',
+		type: "POST",
+		datatype: "application/json",
+		data: myJson,
+		async: true,
+		success: function(data) {
+			var rs = $.parseJSON(data);
+			if(rs['status']=="1")
+				$('#swExamStatus').prop('checked', true);
+			else
+				$('#swExamStatus').prop('checked', false);
+
+		},
+		error: function() {
+			console.log("error"); //writeLog
+		}
+	});
+
+	$("#swExamStatus").change(function() {
+		
+			var parm = new Object();
+			parm.examNo = $("#hiddenExamNo").val();
+			if(this.checked) {
+				parm.status = '1';
+			}else
+				parm.status = '0';
+			var myJson = JSON.stringify(parm);
+			$.ajax({
+				url: 'https://portal.moj.go.th/ws/academy/academy.php/toggleStatus',
+				type: "POST",
+				datatype: "application/json",
+				data: myJson,
+				async: true,
+				success: function(data) {
+					var rs = $.parseJSON(data);
+					if(rs['status']!="success")
+						alert("ไม่สำเร็จ");
+				},
+				error: function() {
+					console.log("error"); //writeLog
+				}
+			});
+		
+	});
+</script>

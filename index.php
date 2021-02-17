@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <head>
 	<base href="">
 	<meta charset="utf-8" />
-	<title>Login Page 1 | Keenthemes</title>
+	<title>OPS Academy | Teerapon</title>
 	<meta name="description" content="Login page example" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -52,12 +52,13 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
 					<!--begin::Aside header-->
 					<a href="#" class="text-center mb-10">
-						<img src="assets/media/logos/logo-letter-1.png" class="max-h-70px" alt="" />
+						<img src="assets/media/logos/opsaca_logo.png" class="max-h-100px" alt="" />
 					</a>
 					<!--end::Aside header-->
 					<!--begin::Aside title-->
-					<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">OPS ACADEMY
-						<br />with great build tools
+					
+					<h3 class="font-weight-bolder text-center font-size-h2 font-size-h1-lg" style="color: #986923;">OPS ACADEMY
+					
 					</h3>
 					<!--end::Aside title-->
 				</div>

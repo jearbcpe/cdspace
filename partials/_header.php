@@ -56,20 +56,24 @@ $arrPage = explode("/", $page);
 									$arrExam = json_decode($response, true);
 
 									for ($i=0;$i < sizeof($arrExam);$i++) {
+										$order = $arrExam[$i]['order'];
 										$no = $arrExam[$i]['examNo'];
 										$code = $arrExam[$i]['examCode'];
 										$name = $arrExam[$i]['examName'];
-									
+										$active = $arrExam[$i]['active'];
+										if($active == "1" || $_SESSION['u_id'] == "1229"){
 									?>
 									<li class="menu-item <?php= ($arrPage[1] == $code) ?  'menu-item-active' :  ''; ?>" aria-haspopup="true">
 										<a href="./home.php?page=javascript/<?php echo $code; ?>" class="menu-link">
 											<i class="menu-bullet menu-bullet-dot">
 												<span></span>
 											</i>
-											<span class="menu-text"><?php echo $name; ?></span>
+											<span class="menu-text"><?php echo (intval($order) + 1).'. '.$name; ?></span>
 										</a>
 									</li>
-									<?php } ?>
+									<?php }
+									} 
+									?>
 										
 									
 								</ul>

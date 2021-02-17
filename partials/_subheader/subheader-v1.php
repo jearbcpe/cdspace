@@ -17,8 +17,9 @@ $arrPage = explode("/", $page);
 									<div class="d-flex align-items-baseline flex-wrap mr-5">
 
 										<!--begin::Page Title-->
-										<h5 class="text-dark font-weight-bold my-1 mr-5">Exercise : <?php echo $arrPage[1]; ?></h5>
-
+										<h5 class="text-dark font-weight-bold my-1 mr-5">Exercise : <?php echo $arrPage[1]; ?>
+										</h5>
+									
 										<!--end::Page Title-->
 									</div>
 
@@ -26,7 +27,14 @@ $arrPage = explode("/", $page);
 								</div>
 
 								<!--end::Info-->
-
+								<div class="d-flex align-items-right flex-wrap mr-1">
+									<span class="switch switch-outline switch-icon switch-success">
+										<label>
+											<input type="checkbox" id="swExamStatus" checked="checked" name="select">
+											<span></span>
+										</label>
+									</span>
+								</div>
 							
 
 								<!--end::Toolbar-->
