@@ -27,21 +27,26 @@
             </div>
             <!--end::Body-->
         </div>
-        <div class="card card-custom card-shadowless gutter-b">
-            <!--begin::Body-->
-            <div class="card-body">
-                <h3 class="card-title align-items-start flex-column">
-
-                    <div class="col-12">
-
-                        <span class="card-label font-weight-bolder text-dark">HTML</span>
+        <div class="card card-custom card-shadowless gutter-b" >
+    <!--begin::Body-->
+    <div class="card card-custom bg-primary">
+                <div class="card-header border-0">
+                    <div class="card-title">
+                        <span class="card-icon">
+                            <i class="flaticon2-chat-1 text-white"></i>
+                        </span>
+                        <h3 class="card-label text-white">HTML</h3>
                     </div>
-                </h3>
-                <div class="col-6">
+                  
+                </div>
+                <div class="separator separator-solid separator-white opacity-20"></div>
+                <div class="col-12">
+                    <div class="col-12"  style="color:aliceblue;font-size: 22px;" >
                     <xmp><button class="btn btn-secondary" onclick=sayHello()>Say Hello</button></xmp>
                 </div>
             </div>
             <!--end::Body-->
+        </div>
         </div>
         <?php include('pages/codingSpace.php'); ?>
     </div>

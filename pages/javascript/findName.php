@@ -38,17 +38,21 @@
             </div>
             <!--end::Body-->
         </div>
-        <div class="card card-custom card-shadowless gutter-b">
-            <!--begin::Body-->
-            <div class="card-body">
-                <h3 class="card-title align-items-start flex-column">
-
-                    <div class="col-12">
-
-                        <span class="card-label font-weight-bolder text-dark">HTML</span>
+        <div class="card card-custom card-shadowless gutter-b" >
+    <!--begin::Body-->
+    <div class="card card-custom bg-primary">
+                <div class="card-header border-0">
+                    <div class="card-title">
+                        <span class="card-icon">
+                            <i class="flaticon2-chat-1 text-white"></i>
+                        </span>
+                        <h3 class="card-label text-white">HTML</h3>
                     </div>
-                </h3>
+                  
+                </div>
+                <div class="separator separator-solid separator-white opacity-20"></div>
                 <div class="col-12">
+                    <div class="col-12"  style="color:aliceblue;font-size: 22px;" >
                     <xmp>
 <div class="col-3">
     <input class="form-control" type="text" id="txtString" value="เป็นที่แน่นอนว่าคุณ<?=str_replace("นาย","",str_replace("นาง","",str_replace("นางสาว","",$_SESSION['u_fullName'])));?>เป็นคนหน้าตาดี" readonly />
@@ -61,6 +65,7 @@
     <input class="form-control" type="text" id="txtResult" placeholder="ชื่อของคุณ" value="" readonly />
 </div>
                     </xmp>
+                </div>
                 </div>
             </div>
             <!--end::Body-->

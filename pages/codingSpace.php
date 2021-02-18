@@ -1,20 +1,24 @@
-
 <div class="card card-custom card-shadowless gutter-b" id="divJSCode">
-            <!--begin::Body-->
-            <div class="card-body">
-                <h3 class="card-title align-items-start flex-column">
-
-                    <div class="col-12">
-
-                        <span class="card-label font-weight-bolder text-dark">JavaScript</span>
+    <!--begin::Body-->
+    <div class="card card-custom bg-success">
+                <div class="card-header border-0">
+                    <div class="card-title">
+                        <span class="card-icon">
+                            <i class="flaticon2-chat-1 text-white"></i>
+                        </span>
+                        <h3 class="card-label text-white">JavaScript</h3>
                     </div>
-                </h3>
-                <div class="col-6">
-                    <p id="pJSCode"></p>
+                  
+                </div>
+                <div class="separator separator-solid separator-white opacity-20"></div>
+                <div class="col-12">
+                    <div class="col-12">
+                        <p style="color:aliceblue;font-size: 22px;" id="pJSCode"></p>
+                    </div>    
                 </div>
             </div>
-            <!--end::Body-->
-        </div>
+    <!--end::Body-->
+</div>
 <div class="card card-custom card-shadowless gutter-b">
     <div class="card-header border-0 py-5">
         <h3 class="card-title align-items-start flex-column">
@@ -34,7 +38,7 @@
             <div class="col-12">
                 <div class="col-12">
                     <div class="form-group row">
-                        <textarea class="form-control" rows="8" id="txtCode"></textarea>
+                        <textarea class="form-control" rows="8" id="txtCode" style="font-size: 22px;"></textarea>
                     </div>
                     <div class="form-group row">
                         <button type="button" onclick="run();" class="btn btn-lg btn-outline-success mr-2">Run</button>
@@ -64,16 +68,17 @@
 
 <script>
     loadCode();
+   
     $("#divJSCode").hide();
     $("#divShowSuccess").hide();
 
     function run() {
-       
+
         var el = document.getElementById('txtCode');
         var scriptText = el.value;
-        if($.trim(scriptText) != "")
+        if ($.trim(scriptText) != "")
             $("#divJSCode").show();
-        $("#pJSCode").html('<xmp>'+scriptText+'</xmp>');
+        $("#pJSCode").html('<xmp>' + scriptText + '</xmp>');
         var oldScript = document.getElementById('scriptContainer');
         var newScript;
 
@@ -84,6 +89,7 @@
         newScript = document.createElement('script');
         newScript.id = 'scriptContainer';
         newScript.text = el.value;
+        saveCode();
         document.body.appendChild(newScript);
         document.getElementById('txtCode').focus();
     }
@@ -111,7 +117,7 @@
                 if (rs['status'] == "success") {
 
                     //$('#divShowSuccess').show();
-                    $("#divShowSuccess").show().delay(1000).fadeOut();
+                    $("#divShowSuccess").show().delay(500).fadeOut();
                     $('#btnSaveCode').prop('disabled', true);
 
                     $('#btnLoadCode').prop('disabled', false);
@@ -146,13 +152,15 @@
                     var codeContent = atob(rs['codeContent']);
                     $("textarea#txtCode").val(codeContent);
                     $('#btnLoadCode').prop('disabled', false);
-                    if($.trim($("#txtCode").val())=='')
+                    if ($.trim($("#txtCode").val()) == '')
                         $('#btnSaveCode').prop('disabled', true);
                     else
                         $('#btnSaveCode').prop('disabled', false);
+
+                        run();
                 } else if (rs['status'] == "fail") {
                     $('#btnLoadCode').prop('disabled', true);
-                    if($.trim($("#txtCode").val())=='')
+                    if ($.trim($("#txtCode").val()) == '')
                         $('#btnSaveCode').prop('disabled', true);
                     else
                         $('#btnSaveCode').prop('disabled', false);
