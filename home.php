@@ -7,6 +7,12 @@ if(isset($_GET['u_id'])){
 	echo "<script>window.location = window.location.href.split('?')[0] + '?page=javascript/helloJS';</script>";
 }
 
+if(!isset($_SESSION['u_id'])){
+	echo "<script> window.location = 'index.php';</script>";
+	
+}
+	
+
 ?>
 <!DOCTYPE html>
 

@@ -26,12 +26,13 @@
                         </div>
 
                         <div class="col-2">
-                            <button class="form-control btn btn-success" onclick=compareNull()> Compare</button>
+                            <button class="form-control btn btn-success" onclick=compareType()> Compare</button>
                         </div>
                         <script>
                             var x = null;
                             var y;
                         </script>
+
                     </div>
                 </div>
 
@@ -56,6 +57,10 @@
                     <xmp>
 <div class="col-2">
     <h3 class="display-4" id="txtResult">?</p>
+</div>
+
+<div class="col-2">
+    <button class="form-control btn btn-success" onclick=compareType()> Compare</button>
 </div>
 <script>
     var x = null;

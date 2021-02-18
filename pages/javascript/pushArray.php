@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_13"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_23"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -17,22 +17,29 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">เปรียบเทียบตัวแปร x กับ ตัวแปร y ให้เป็นจริง  </h2>
+                    <h2 class="h2 text-primary ">เปลี่ยนเครื่องหมายแบ่งข้อความจาก comma( , ) เป็น vertical bar ( | ) หลังจากดปุ่ม </h2>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">
-                        <div class="col-2">
-                            <h3 class="display-4" id="txtResult">?</p>
+                        <div class="col-3">
+                            <input class="form-control" type="text" id="txtStrArray" value="" />
                         </div>
-
-                        <div class="col-2">
-                            <button class="form-control btn btn-success" onclick=compareNull()> Compare</button>
+                        <div class="col-3">
+                            <input class="form-control" type="text" id="txtNewStr" value="" />
                         </div>
-                        <script>
-                            var x = null;
-                            var y;
-                        </script>
+                        <div class="col-2">
+                            <button class="form-control btn btn-success" onclick=pushMember()> Push </button>
+                        </div>
+                        <div class="col-2">
+                            <button class="form-control btn btn-danger" onclick=popMember()> POP </button>
+                        </div>
+                      
                     </div>
+                    <script>
+                        var arrStr = ['orange','green','blue','red'];
+                        document.getElementById('txtStrArray').value = arrStr.toString();
+                    </script>
+
                 </div>
 
             </div>
@@ -52,23 +59,30 @@
                 </div>
                 <div class="separator separator-solid separator-white opacity-20"></div>
                 <div class="col-12">
-                    <div class="col-12"  style="color:aliceblue;font-size: 22px;" >
+                    <div class="col-12"  style="color:aliceblue;font-size: 20px;" >
                     <xmp>
-<div class="col-2">
-    <h3 class="display-4" id="txtResult">?</p>
-</div>
-
-<div class="col-2">
-    <button class="form-control btn btn-success" onclick=compareNull()> Compare</button>
+<div class="col-3">
+        <input class="form-control" type="text" id="txtStrArray" value="" />
+    </div>
+    <div class="col-3">
+        <input class="form-control" type="text" id="txtNewStr" value="" />
+    </div>
+    <div class="col-2">
+        <button class="form-control btn btn-success" onclick=pushMember()> Push </button>
+    </div>
+    <div class="col-2">
+        <button class="form-control btn btn-danger" onclick=popMember()> POP </button>
+    </div>
+    
 </div>
 <script>
-    var x = null;
-    var y;
+    var arrStr = ["orange","green","blue","red"];
+    document.getElementById('txtStrArray').value = arrStr.toString();
 </script>
                     </xmp>
                 </div>
+                </div>
             </div>
-    </div>
             <!--end::Body-->
         </div>
         <?php include('pages/codingSpace.php'); ?>
