@@ -17,7 +17,7 @@
             <!--begin::Body-->
             <div class="card-body">
             <div class="col-12">
-                <h2 class="h2 text-primary ">Alert ข้อความ Hello JavaScript</h2>
+                <h2 class="h2 text-primary ">Alert ชื่อใน Input</h2>
             </div>
 
             <div class="col-12 pt-10">

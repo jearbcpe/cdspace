@@ -17,7 +17,7 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">คลิกปุ่มแล้วแสดงข้อความใน Console ว่า "Ministry of Justice"</h2>
+                    <h2 class="h2 text-primary ">คลิกปุ่มแล้วแสดงข้อความใน Console จาก Input</h2>
                 </div>
                 <div class="col-4 pt-10">
                     <input class="form-control" type="text" id="txtSubject" value="" />
