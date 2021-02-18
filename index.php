@@ -110,6 +110,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								<a href="assets/files/JavaScript_Part1.pdf" download>
 									- Slide JavaScript 1 
 								</a>
+								<br>
+								<!--
+								<a href="assets/files/JavaScript_Part2.pdf" download>
+									- Slide JavaScript 2 
+								</a>
+								-->
 							</div>
 							<!--end::Action-->
 						</form>
