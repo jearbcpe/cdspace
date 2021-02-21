@@ -105,13 +105,16 @@ else
 		
 	});
 
-
-		
+	$(document).ready(function(){
+		var parm = new Object();
+			parm.examGroup = 'js';
+		var myJson = JSON.stringify(parm);
 		$.ajax({
 			url: 'https://portal.moj.go.th/ws/academy/academy.php/examList',
 			type: "POST",
 			datatype: "application/json",
 			async: true,
+			data: myJson,
 			success: function(data) {
 	
 				var strMenu = '<div class="menu-submenu menu-submenu-classic menu-submenu-left"><ul class="menu-subnav">';
@@ -129,11 +132,11 @@ else
 					if(active == "1" || "<?php echo $_SESSION['u_id']; ?>" == "1229"){
 						strMenu += '<li class="menu-item ' + strActive + '" aria-haspopup="true">';
 						strMenu += '<a href="./home.php?page=javascript/'+code+'" class="menu-link"><i class="menu-bullet menu-bullet-dot"><span></span></i>';
-						strMenu += '<span class="menu-text">'+(parseInt(order) +1 )+ '. ' + name + '</span></a></li>';
+						strMenu += '<span class="menu-text">'+(i +1 )+ '. ' + name + '</span></a></li>';
 					}
 				}
 				strMenu += '</ul></div>';
-				$("#divMenu").html(strMenu);
+				$("#divJSMenu").html(strMenu);
 				
 			},
 			error: function() {
@@ -141,4 +144,87 @@ else
 			}
 	
 		});
+	});
+
+	$(document).ready(function(){
+		var parm = new Object();
+			parm.examGroup = 'jq';
+		var myJson = JSON.stringify(parm);
+		$.ajax({
+			url: 'https://portal.moj.go.th/ws/academy/academy.php/examList',
+			type: "POST",
+			datatype: "application/json",
+			async: true,
+			data: myJson,
+			success: function(data) {
+	
+				var strMenu = '<div class="menu-submenu menu-submenu-classic menu-submenu-left"><ul class="menu-subnav">';
+				var rs = $.parseJSON(data);
+				for(var i = 0;i<rs.length;i++){
+					var order = rs[i]['order'];
+					var no = rs[i]['examNo'];
+					var code = rs[i]['examCode'];
+					var name = rs[i]['examName'];
+					var active = rs[i]['active'];
+					var strActive = "";
+					if(code == "<?php echo $arrPage[1]; ?>")
+						strActive += "menu-item-active";
+					
+					if(active == "1" || "<?php echo $_SESSION['u_id']; ?>" == "1229"){
+						strMenu += '<li class="menu-item ' + strActive + '" aria-haspopup="true">';
+						strMenu += '<a href="./home.php?page=jquery/'+code+'" class="menu-link"><i class="menu-bullet menu-bullet-dot"><span></span></i>';
+						strMenu += '<span class="menu-text">'+(i +1 )+ '. ' + name + '</span></a></li>';
+					}
+				}
+				strMenu += '</ul></div>';
+				$("#divJQMenu").html(strMenu);
+				
+			},
+			error: function() {
+				console.log("error"); //writeLog
+			}
+	
+		});
+	});
+
+	$(document).ready(function(){
+		var parm = new Object();
+			parm.examGroup = 'ws';
+		var myJson = JSON.stringify(parm);
+		$.ajax({
+			url: 'https://portal.moj.go.th/ws/academy/academy.php/examList',
+			type: "POST",
+			datatype: "application/json",
+			async: true,
+			data: myJson,
+			success: function(data) {
+	
+				var strMenu = '<div class="menu-submenu menu-submenu-classic menu-submenu-left"><ul class="menu-subnav">';
+				var rs = $.parseJSON(data);
+				for(var i = 0;i<rs.length;i++){
+					var order = rs[i]['order'];
+					var no = rs[i]['examNo'];
+					var code = rs[i]['examCode'];
+					var name = rs[i]['examName'];
+					var active = rs[i]['active'];
+					var strActive = "";
+					if(code == "<?php echo $arrPage[1]; ?>")
+						strActive += "menu-item-active";
+					
+					if(active == "1" || "<?php echo $_SESSION['u_id']; ?>" == "1229"){
+						strMenu += '<li class="menu-item menu-item-submenu ' + strActive + '" data-menu-toggle="hover" aria-haspopup="true">';
+						strMenu += '<a href="./home.php?page=workshop/'+code+'" class="menu-link"><i class="menu-bullet menu-bullet-dot"><span></span></i>';
+						strMenu += '<span class="menu-text">'+(i +1 )+ '. ' + name + '</span></a></li>';
+					}
+				}
+				strMenu += '</ul></div>';
+				$("#divWSMenu").html(strMenu);
+				
+			},
+			error: function() {
+				console.log("error"); //writeLog
+			}
+	
+		});
+	});
 </script>

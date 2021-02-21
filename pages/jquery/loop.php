@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_23"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_27"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -17,29 +17,27 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">กดปุ่ม Push เพื่อเพิ่มข้อมูล / กดปุ่ม Pop เพื่อลบข้อมูลตัวสุดท้าย </h2>
+                    <h2 class="h2 text-primary ">หาผลรวมของ<u>เลขคี่</u>ของช่วงตัวเลข เช่น 1 2 3 4 = 4 </h2>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">
                         <div class="col-3">
-                            <input class="form-control" type="text" id="txtStrArray" value="" />
+                            <input class="form-control" type="number" min="0" max="100" id="txtStartNumber" value="" placeholder="เลขเริ่มต้น" />
+                        </div>
+                        <div class="col-1" align="center">
+                            <p class="form-control text-danger" id="txtOfString"> to </p>
                         </div>
                         <div class="col-3">
-                            <input class="form-control" type="text" id="txtNewStr" value="" />
+                            <input class="form-control" type="number" min="0" max="100" id="txtEndNumber" value="" placeholder="เลขสิ้นสุด" />
                         </div>
                         <div class="col-2">
-                            <button class="form-control btn btn-success" onclick=pushMember()> Push </button>
+                            <button class="form-control btn btn-success" onclick=sumOdd()> = </button>
                         </div>
                         <div class="col-2">
-                            <button class="form-control btn btn-danger" onclick=popMember()> POP </button>
+                            <input class="form-control" type="text" id="txtResult" placeholder="ผลรวม" value="" readonly />
                         </div>
-                      
+                    
                     </div>
-                    <script>
-                        var arrStr = ['orange','green','blue','red'];
-                        document.getElementById('txtStrArray').value = arrStr.toString();
-                    </script>
-
                 </div>
 
             </div>
@@ -59,26 +57,23 @@
                 </div>
                 <div class="separator separator-solid separator-white opacity-20"></div>
                 <div class="col-12">
-                    <div class="col-12"  style="color:aliceblue;font-size: 20px;" >
+                    <div class="col-12"  style="color:aliceblue;font-size: 22px;" >
                     <xmp>
 <div class="col-3">
-        <input class="form-control" type="text" id="txtStrArray" value="" />
-    </div>
-    <div class="col-3">
-        <input class="form-control" type="text" id="txtNewStr" value="" />
-    </div>
-    <div class="col-2">
-        <button class="form-control btn btn-success" onclick=pushMember()> Push </button>
-    </div>
-    <div class="col-2">
-        <button class="form-control btn btn-danger" onclick=popMember()> POP </button>
-    </div>
-    
+    <input class="form-control" type="number" min="0" max="100" id="txtStartNumber" value="" placeholder="เลขเริ่มต้น" />
 </div>
-<script>
-    var arrStr = ["orange","green","blue","red"];
-    document.getElementById('txtStrArray').value = arrStr.toString();
-</script>
+<div class="col-1" align="center">
+    <p class="form-control text-danger" id="txtOfString"> to </p>
+</div>
+<div class="col-3">
+    <input class="form-control" type="number" min="0" max="100" id="txtEndNumber" value="" placeholder="เลขสิ้นสุด" />
+</div>
+<div class="col-2">
+    <button class="form-control btn btn-success" onclick=sumOdd()> = </button>
+</div>
+<div class="col-2">
+    <input class="form-control" type="text" id="txtResult" placeholder="ผลรวม" value="" readonly />
+</div>
                     </xmp>
                 </div>
                 </div>

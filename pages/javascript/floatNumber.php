@@ -17,26 +17,26 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">เปลี่ยนเครื่องหมายแบ่งข้อความจาก comma( , ) เป็น vertical bar ( | ) หลังจากดปุ่ม </h2>
+                    <h2 class="h2 text-primary ">แสดงผลลัพธ์ตามช่องที่กำหนด</h2>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">
                         <div class="col-3">
                             <input class="form-control" type="number" id="txtNumber" value="" placeholder="ตัวเลข" />
                         </div>
-                        <div class="col-3">
+                        <div class="col-2">
                             <input class="form-control" type="number" id="txtDigit" value="" placeholder="จำนวนหลัก"/>
                         </div>
                         <div class="col-2">
                             <button class="form-control btn btn-success" onclick=changeSeparate()> = </button>
                         </div>
-                        <div class="col-3">
-                            <input class="form-control" type="text" id="txtResult1" placeholder="ผลลัพธ์ (ตามจำนวนหลังจุด)" value=""  />
+                        <div class="col-4">
+                            <input class="form-control" type="text" id="txtResult1" placeholder="ตัวเลขหลังจุดทศนิยมเท่ากับจำนวนหลัก" value="" readonly />
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-3 offset-8">
-                            <input class="form-control" type="text" id="txtResult2" placeholder="ผลลัพธ์ (ตามจำนวนก่อนและหลังจุด)" value="" />
+                        <div class="col-4 offset-7">
+                            <input class="form-control" type="text" id="txtResult2" placeholder="ตัวเลขก่อนและหลังจุดทศนิยมรวมกันเท่ากับจำนวนหลัก" value="" readonly/>
                         </div>
                         
                     </div>
