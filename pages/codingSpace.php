@@ -45,7 +45,7 @@
 
                     <div class="form-group row">
                         <div class="col-11">
-                            <textarea class="form-control" rows="8" id="txtCode" style="font-size: 20px;"></textarea>
+                            <textarea class="form-control" rows="40" id="txtCode" style="font-size: 16px;"></textarea>
 
                         </div>
                         <div class="col-1">

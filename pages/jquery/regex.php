@@ -28,7 +28,7 @@
                         </div>
                       
                         <div class="col-2">
-                            <button class="form-control btn btn-success" id="btnValidate"> ตรวจสอบ </button>
+                            <button class="form-control btn btn-success" onclick="validateEmail()"> ตรวจสอบ </button>
                         </div>
                         <script>
                             var emailRegex = /\S+@\S+\.\S+/;
@@ -62,7 +62,7 @@
 </div>
 
 <div class="col-2">
-    <button class="form-control btn btn-success" id="btnValidate"> ตรวจสอบ </button>
+    <button class="form-control btn btn-success"  onclick="validateEmail()"> ตรวจสอบ </button>
 </div>
 <script>
     var emailRegex = /\S+@\S+\.\S+/;

@@ -17,40 +17,44 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">บันทึกข้อมูลผู้ใช้ </h2>
+                    <h2 class="h2 text-primary ">Alert ข้อมูลแต่ละฟิล์ดเป็น JSON ที่เป็น String </h2>
                 </div>
                 <div class="col-12 pt-10">
-                    <div class="row">
+                <div class="row">
                         <div class="form-group col-3">
                             <label style="font-size:15px;">คำนำหน้า</label>
-                            <div class="input-group">
-                                <select class="form-control text-secondary" id="sePreName">
+                          
+                            <select class="form-control text-secondary" id="sePreName" style="background-image: none;">
                                     <option value="0">คำนำหน้า</option>
                                     <option value="1">นาย</option>
                                     <option value="2">นาง</option>
                                     <option value="3">นางสาว</option>
                                 </select>
-                            </div>
+          
+                            <div class="valid-feedback">ข้อมูลถูกต้อง</div>
+                            <div class="invalid-feedback">กรุณาเลือกคำนำหน้า</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-6">
                             <label style="font-size:15px;">ชื่อ</label>
-                            <div class="input-group">
+                           
                                 <input class="form-control" type="text" id="txtFirstName" placeholder="ชื่อ" value="" >
-                            </div>
+                                <div class="valid-feedback">ข้อมูลถูกต้อง</div>
+                                <div class="invalid-feedback">ข้อมูลไม่ถูกต้อง</div>
+                           
                         </div>
                         <div class="form-group col-6">
                             <label style="font-size:15px;">นามสกุล</label>
-                            <div class="input-group">
                                 <input class="form-control" type="text" id="txtLastName" placeholder="นามสกุล" value="" >
-                            </div>
+                                <div class="valid-feedback">ข้อมูลถูกต้อง</div>
+                                <div class="invalid-feedback">ข้อมูลไม่ถูกต้อง</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-6">
                             <label style="font-size:15px;">อายุ</label>
-                            <input class="form-control" type="text" id="txtAge" placeholder="อายุ" value="" >
+                            <input class="form-control" type="number" id="txtAge" placeholder="อายุ" value="0" >
                             <div class="valid-feedback">ข้อมูลถูกต้อง</div>
                             <div class="invalid-feedback">ข้อมูลไม่ถูกต้อง</div>
                         </div>
@@ -64,9 +68,12 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-2">
-                            <button class="form-control btn btn-success" id="btnSave"> ตรวจสอบ </button>
+                            <button class="form-control btn btn-success" onclick="saveProfile()"> ตรวจสอบ </button>
                         </div>
                     </div>
+                    <script>
+                         var emailRegex = /\S+@\S+\.\S+/;
+                    </script>
                 </div>
 
             </div>
@@ -88,11 +95,11 @@
                 <div class="col-12">
                     <div class="col-12" style="color:aliceblue;font-size: 22px;">
                         <xmp>
-                        <div class="row">
+<div class="row">
 <div class="form-group col-3">
     <label style="font-size:15px;">คำนำหน้า</label>
     
-        <select class="form-control text-secondary" id="sePreName">
+    <select class="form-control text-secondary" id="sePreName" style="background-image: none;">
             <option value="0">คำนำหน้า</option>
             <option value="1">นาย</option>
             <option value="2">นาง</option>
@@ -100,7 +107,7 @@
         </select>
 
     <div class="valid-feedback">ข้อมูลถูกต้อง</div>
-    <div class="invalid-feedback">ข้อมูลไม่ถูกต้อง</div>
+    <div class="invalid-feedback">กรุณาเลือกคำนำหน้า</div>
 </div>
 </div>
 <div class="row">
@@ -122,7 +129,7 @@
 <div class="row">
 <div class="form-group col-6">
     <label style="font-size:15px;">อายุ</label>
-    <input class="form-control" type="text" id="txtAge" placeholder="อายุ" value="" >
+    <input class="form-control" type="number" id="txtAge" placeholder="อายุ" value="0" >
     <div class="valid-feedback">ข้อมูลถูกต้อง</div>
     <div class="invalid-feedback">ข้อมูลไม่ถูกต้อง</div>
 </div>
@@ -136,9 +143,12 @@
 </div>
 <div class="form-group row">
 <div class="col-2">
-    <button class="form-control btn btn-success" id="btnSave"> ตรวจสอบ </button>
+    <button class="form-control btn btn-success" onclick="saveProfile()"> ตรวจสอบ </button>
 </div>
 </div>
+<script>
+    var emailRegex = /\S+@\S+\.\S+/;
+</script>
                         </xmp>
                     </div>
                 </div>
