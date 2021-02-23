@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_24"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_30"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -17,7 +17,7 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">Alert ข้อมูลแต่ละฟิล์ดเป็น JSON ที่เป็น String </h2>
+                    <h2 class="h2 text-primary ">Alert ค่า memId ที่ได้จากการเรียก Service : saveMember</h2>
                 </div>
                 <div class="col-12 pt-10">
                 <div class="row">
@@ -68,7 +68,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-2">
-                            <button class="form-control btn btn-success" onclick="saveProfile()"> ตรวจสอบ </button>
+                            <button class="form-control btn btn-success" onclick="saveMember()"> บันทึก </button>
                         </div>
                     </div>
                     <script>
@@ -143,7 +143,7 @@
 </div>
 <div class="form-group row">
 <div class="col-2">
-    <button class="form-control btn btn-success" onclick="saveProfile()"> ตรวจสอบ </button>
+    <button class="form-control btn btn-success" onclick="saveMember()"> ตรวจสอบ </button>
 </div>
 </div>
 <script>

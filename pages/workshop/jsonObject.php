@@ -1,4 +1,4 @@
-<input type="hidden" id="hiddenExamNo" value="exam_25"></input>
+<input type="hidden" id="hiddenExamNo" value="exam_24"></input>
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -17,14 +17,14 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">ตรวจสอบความถูกต้องของข้อมูล พร้อม alert ผลลัพธ์เป็น true หากข้อมูลถูกต้องทั้งหมด หรือ false หากมีข้อมูลใดข้อมูลหนึ่งไม่ถูกต้อง </h2>
+                    <h2 class="h2 text-primary ">Console.log ข้อมูลแต่ละ Field เป็น JSON ที่เป็น String </h2>
                 </div>
                 <div class="col-12 pt-10">
-                    <div class="row">
+                <div class="row">
                         <div class="form-group col-3">
                             <label style="font-size:15px;">คำนำหน้า</label>
                           
-                                <select class="form-control text-secondary" id="sePreName" style="background-image: none;">
+                            <select class="form-control text-secondary" id="sePreName" style="background-image: none;">
                                     <option value="0">คำนำหน้า</option>
                                     <option value="1">นาย</option>
                                     <option value="2">นาง</option>
@@ -73,6 +73,7 @@
                     </div>
                     <script>
                          var emailRegex = /\S+@\S+\.\S+/;
+                         var userId = "<?php=$_SESSION['u_id'];?>";
                     </script>
                 </div>
 
@@ -148,6 +149,7 @@
 </div>
 <script>
     var emailRegex = /\S+@\S+\.\S+/;
+    var userId = "<?php=$_SESSION['u_id'];?>";
 </script>
                         </xmp>
                     </div>

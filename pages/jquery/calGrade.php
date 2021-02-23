@@ -17,7 +17,14 @@
             <!--begin::Body-->
             <div class="card-body">
                 <div class="col-12">
-                    <h2 class="h2 text-primary ">เมื่อกดปุ่มให้แสดงจำนวนตัวอักษร </h2>
+                    <h2 class="h2 text-primary ">เมื่อกดปุ่มให้แสดงเกรด ตามเงื่อนไขดังนี้ </h2>
+                    <p>
+                    <font size=5>มากกว่าเท่ากับ 80 เท่ากับ A</font><br>
+                    <font size=5>มากกว่าเท่ากับ 70 เท่ากับ B</font><br>
+                    <font size=5>มากกว่าเท่ากับ 60 เท่ากับ C</font><br>
+                    <font size=5>มากกว่าเท่ากับ 50 เท่ากับ D</font><br>
+                    <font size=5>น้อยกว่า 50 เท่ากับ F</font><br>
+                    </p>
                 </div>
                 <div class="col-12 pt-10">
                     <div class="form-group row">
