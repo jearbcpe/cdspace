@@ -73,7 +73,6 @@
                     </div>
                     <script>
                          var emailRegex = /\S+@\S+\.\S+/;
-                         var userId = "<?php=$_SESSION['u_id'];?>";
                     </script>
                 </div>
 
@@ -149,7 +148,6 @@
 </div>
 <script>
     var emailRegex = /\S+@\S+\.\S+/;
-    var userId = "<?php=$_SESSION['u_id'];?>";
 </script>
                         </xmp>
                     </div>
